@@ -18,12 +18,25 @@ const NavBar = () => {
           navigate("/first-research");
         }}
       >
-        <Button colorScheme="blue" type="submit">
+        <Button colorScheme="blue" type="submit" size="lg">
           First Research
         </Button>
       </form>
-      <Button colorScheme="blue">Add Duns</Button>
-      <Button colorScheme="blue">Upload</Button>
+
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          navigate("/file-upload");
+        }}
+      >
+        <Button colorScheme="blue" type="submit" size="lg">
+          Add Duns
+        </Button>
+      </form>
+
+      <Button colorScheme="blue" size="lg">
+        Upload
+      </Button>
       <PlatformSelector />
       <SearchInput />
       <Image src={logo} boxSize="60px" />
